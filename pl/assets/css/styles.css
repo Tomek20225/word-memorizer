@@ -1,0 +1,193 @@
+/* ----- GLOBAL ------ */
+body {
+	width: 100%;
+	height: 100%;
+
+	background-color: white;
+
+	margin: 0;
+	padding: 0;
+}
+#nextStep,
+#checkContainer,
+#result,
+#loadingOverlay {
+	transition: display 1s ease-out;
+}
+.inactive {
+	display: none;
+}
+.active {
+	display: block;
+}
+
+/* ----- NAVBAR ----- */
+.navbar {
+	position: sticky;
+	top: 0;
+	z-index: 99;
+}
+.bg-light {
+	background-color: #17a2b8 !important;
+}
+.navbar-brand {
+	color: white !important;
+	font-weight: 500;
+}
+@media (max-width: 380px) {
+	.navbar-brand {
+		text-align: center !important;
+		margin: auto !important;
+	}
+}
+
+/* ----- MAIN ----- */
+.main {
+	height: 100%;
+	width: 100%;
+}
+.main h1 {
+	text-align: center;
+	margin-top: 10%;
+}
+.main .roundedInput {
+	border: 1px solid gray;
+	border-radius: 3rem;
+	background-color: white;
+	min-width: 250px;
+	width: 100%;
+	max-width: 500px;
+	margin: auto;
+	text-align: center;
+	overflow: hidden;
+	margin-top: 3rem;
+	max-height: 5rem;
+}
+.main .roundedInput input {
+	outline: none;
+	border: none;
+	width: 70%;
+	float: left;
+	text-align: center;
+	font-size: 3rem;
+}
+.main .roundedInput input::placeholder {
+	color: lightgray;
+	font-size: 2rem;
+	line-height: 3rem;
+}
+.main .roundedInput button {
+	border: 1px solid gray;
+	height: 4.6rem;
+    margin-left: 0.33rem;
+    width: 9rem;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+}
+.main #result {
+	text-align: center;
+	min-width: 250px;
+	width: 100%;
+	max-width: 500px;
+	margin: auto;
+	margin-top: 4rem;
+}
+.main #result span {
+	float: left;
+}
+@media (max-width: 529px) {
+	.main .roundedInput input {
+		width: 60%;
+	}
+	.main .roundedInput button {
+		float: right;
+	}
+}
+@media (max-width: 479px) {
+	.main h1 {
+		font-size: 4rem !important;
+	}
+	.main .roundedInput input {
+		width: 50%;
+	}
+}
+@media (max-width: 420px) {
+	.main .roundedInput {
+		transform: scale(0.9);
+	}
+}
+@media (max-width: 340px) {
+	.main .roundedInput {
+		transform: scale(0.8);
+	}
+	.main .roundedInput input {
+		width: 40%;
+	}
+	.main .roundedInput input::placeholder {
+		font-size: 1.5rem;
+	}
+}
+
+/* ----- NEXT STEP ----- */
+#nextStep {
+	height: 100%;
+	text-align: center;
+	width: 100%;
+}
+#nextStep button {
+	margin: auto;
+	margin-top: 4rem;
+	font-size: 1.65rem;
+}
+#nextStep h2 {
+	margin-top: 3rem;
+	margin-bottom: 2rem;
+}
+#nextStep #checkContainer input {
+	text-align: center;
+	margin-top: 1rem;
+}
+#nextStep #checkContainer button {
+	margin-top: 0.5rem;
+	margin-bottom: 2rem;
+}
+#nextStep #checkContainer h1 {
+	margin-top: 1.5rem;
+	margin-bottom: 2rem;
+}
+@media (max-width: 479px) {
+	#nextStep #checkContainer h1 {
+		font-size: 2.5rem !important;
+	}
+}
+@media (max-width: 390px) {
+	#nextStep #checkContainer input {
+		max-width: 250px;
+	}
+}
+
+/* ----- LOADING OVERLAY ----- */
+#loadingOverlay {
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	position: fixed;
+	z-index: 999;
+	/*background: rgba(255,255,255,0.3);*/
+	background: white;
+	color: blue;
+	text-align: center;
+}
+#loadingOverlay div {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@media (max-width: 785px) {
+	#loadingOverlay div h1 {
+		display: none;
+	}
+}
